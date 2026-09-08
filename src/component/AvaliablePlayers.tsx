@@ -1,12 +1,17 @@
+import type { iplayerType } from "../type/playerType";
 
-const AvaliablePlayers = (player) => {
+interface IPlayerProps {
+    player: iplayerType[]
+}
+
+const AvaliablePlayers = ({ player }: IPlayerProps) => {
     return (
-        <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
                 {player.map((player) => (
                     <div
                         key={player.playerName}
-                        className="card bg-base-100 w-96 shadow-sm"
+                        className="card bg-base-100 w-full shadow-sm"
                     >
                         <figure>
                             <img

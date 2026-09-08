@@ -8,7 +8,7 @@ interface IplayerProps {
 
 const Players = ({ PlayerPromise }: IplayerProps) => {
     const player = use(PlayerPromise)
-    // console.log("PlayerData", PlayersData)
+    console.log("PlayerData", player)
     return (
         <div >
             <AvaliablePlayers player={player}></AvaliablePlayers>
