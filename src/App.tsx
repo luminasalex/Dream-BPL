@@ -18,7 +18,13 @@ function App() {
     <>
       <Nav />
       <Banner />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div className="flex w-full h-70 items-center justify-center">
+            <span className="loading loading-bars loading-xl"></span>
+          </div>
+        }
+      >
         <Players PlayerPromise={PlayerPromise} />
       </Suspense>
     </>
